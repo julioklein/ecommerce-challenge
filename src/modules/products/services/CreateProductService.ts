@@ -19,7 +19,6 @@ class CreateProductService {
   ) {}
 
   public async execute({ name, price, quantity }: IRequest): Promise<Product> {
-    // TODO
     const productExists = await this.productsRepository.findByName(name);
 
     if (productExists) {
